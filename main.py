@@ -6,5 +6,5 @@ async def root():
 
 
 @app.get("/user")
-async def root():
+async def user():
     return {"greeting": "User", "message": "Welcome to FastAPI!"}
