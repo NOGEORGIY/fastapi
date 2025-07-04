@@ -10,3 +10,13 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return {"greeting": "Hello, World!", "message": "Welcome to FastAPI!"}
+
+class User(BaseModel):
+    FIO: str
+    email: str
+    phoneNumber: str
+    role: str
+
+@app.post("/user/")
+async def create_item(user: User):
+    return user
